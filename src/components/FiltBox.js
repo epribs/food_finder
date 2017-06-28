@@ -4,9 +4,19 @@ import '../css/App.css';
 class FiltBox extends Component {
   render() {
     return (
-      <div className="FiltBox">
-        <div className="whocares">
-          <h3>Filters oughta go here, in a box tho</h3>
+      <div className='row'>
+        <div className='col s12 m6'>
+          <div className='card'>
+            <div className='card-content'>
+              <span className='card-title'>Filter Results</span>
+                <ul>
+                  <li>This is an item</li>
+                  <li>This is an item</li>
+                  <li>This is an item</li>
+                  
+                </ul>
+            </div>
+          </div>
         </div>
       </div>
     );
