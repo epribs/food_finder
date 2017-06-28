@@ -3,6 +3,7 @@ import '../css/App.css';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import { Textfield, Slider, Button } from 'react-mdl';
+import $ from './../../node_modules/jquery/dist/jquery.min';
 
 
 class UserInput extends Component {
@@ -13,6 +14,7 @@ class UserInput extends Component {
             searchRadius: 5,
             zipCode: null
         };
+        this.postInput = this.postInput.bind(this);
   }
   
   postInput() {
@@ -50,7 +52,7 @@ class UserInput extends Component {
             defaultValue={5}
           />
         </div>
-        <Button raised onClick={postInput}>Submit</Button>
+        <Button raised onClick={this.postInput}>Submit</Button>
 
       </div>
     );
