@@ -21,3 +21,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.sliderWidth {
+  width: 18%;
+  margin: auto;
+}
