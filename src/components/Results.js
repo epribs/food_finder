@@ -17,7 +17,7 @@ class Results extends Component {
 
 	},
 
-	renderPlaces: fucntion() {
+	renderPlaces: function() {
 		return this.props.results.docs.map(function(business, index) {
 			return (
 				<div key={index}>
