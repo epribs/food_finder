@@ -5,9 +5,9 @@ var Yelp = require('node-yelp-fusion');
 var yelp = new Yelp({ id:APIData.client_id , secret:APIData.client_secret });
 
 var helpers ={
-	runQuery: function(zip, radius) {
-		var formattedZip = zip.trim();
-		var formattedRadius = radius.trim();
+	runQuery: function(zipCode, searchRadius) {
+		var formattedZip = zipCode.trim();
+		var formattedRadius = searchRadius.trim();
 
 		console.log("Query Run");
 		return yelp.search({

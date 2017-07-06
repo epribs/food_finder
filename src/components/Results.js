@@ -6,8 +6,8 @@ import helpers from '../utils/helpers';
 class Results extends Component {
 	getInitalState: function(){
 		return {
-			zip: '',
-			radius: '1600'
+			zipCode: '',
+			searchRadius: '1600'
 		};
 	},
 
