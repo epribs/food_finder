@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "node-yelp-fusion": "^1.0.4",
+    "jquery": "^3.2.1",
+    "material-components-web": "^0.14.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-mdl": "^1.10.3"
