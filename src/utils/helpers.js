@@ -1,4 +1,4 @@
-var axios = require('Axios');
+var axios = require('axios');
 // var APIKey = require('./ApiKey');
 var APIData = require('./APIData');
 var Yelp = require('node-yelp-fusion');

@@ -4,47 +4,48 @@ import '../css/App.css';
 import helpers from '../utils/helpers';
 
 class Results extends Component {
-	getInitalState: function(){
+	getInitalState(){
 		return {
 			zipCode: '',
 			searchRadius: '1600'
 		};
-	},
+	}
 
-	handleClick: function(item) {
+	handleClick(item) {
 		console.log("clicked");
 		console.log(item);
 
-	},
+	}
 
-	renderPlaces: function() {
+	renderPlaces() {
 		return this.props.results.docs.map(function(business, index) {
 			return (
 				<div key={index}>
 					<li className='list-group-item'>
-						<h3>{businesses[index].name}</h3>
-						<p>{businesses[index].location.address1}<br>
-							{businesses[index].location.address2}<br>
-							{businesses[index].location.address3}<br>
-							{businesses[index].location.city}, {businesses[index].location.state} {businesses[index].location.zipcode}<br>
-							{businesses[index].phone}</p>
+						<h3>{business[index].name}</h3>
+						<p>{business[index].location.address1}<br/>
+							{business[index].location.address2}<br/>
+							{business[index].location.address3}<br/>
+							{business[index].location.city}, {business[index].location.state} {business[index].location.zipcode}<br/>
+							{business[index].phone}</p>
 
-						<a href={businesses[index].url} rel="noopener noreferrer" target="_blank">
+						<a href={business[index].url} rel="noopener noreferrer" target="_blank">
                   <button className="btn btn-default ">View on Yelp</button>
             </a>
 
           	{/*<button className="btn btn-primary" onClick={() => this.handleClick(article)}>Save To Profile</button>*/}
 
-          	<p>Serving: {businesses[index].categories[0].alias} </p>
+          	<p>Serving: {business[index].categories[0].alias} </p>
           </li>
         </div>
 			);
 		}.bind(this));
-	},
-	renderContainer: function() {
+	}
+
+	renderContainer() {
 		return(
 			<div className="main-container">
-				<div className="row"
+				<div className="row">
 					<div className="col-lg-12">
             <div className="panel panel-primary">
               <div className="panel-heading">
@@ -65,17 +66,21 @@ class Results extends Component {
         </div>
       </div>
 		);
-	},
-	render: function() {
-	    return (
-	      <div className="Results">
-	        <div className="stopasking">
-	          <h3>Results will go here</h3>
-	        </div>
-	      </div>
-	    );
+	}
+
+	render() {
+		// if (!this.props.results.docs) {
+	 //    return (
+	 //      <div className="Results">
+	 //        <div className="stopasking">
+	 //          <h3>Results will go here</h3>
+	 //        </div>
+	 //      </div>
+	 //    );
+	 //   }
+	   return this.renderContainer();
 	  }
 	}
-}
+
 
 export default Results;
