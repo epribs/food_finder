@@ -1,24 +1,22 @@
-var axios = require('axios');
-// var APIKey = require('./ApiKey');
+'use strict';
 var APIData = require('./APIData');
-var Yelp = require('node-yelp-fusion');
-var yelp = new Yelp({ id:APIData.client_id , secret:APIData.client_secret });
+var axios=require('axios');
+const yelp = require('yelp-fusion');
 
-var helpers ={
+var helpers = {
 	runQuery: function(zipCode, searchRadius) {
 		var formattedZip = zipCode.trim();
-		var formattedRadius = searchRadius.trim();
-
-		console.log("Query Run");
-		return yelp.search({
-			params: {
-				location: formattedZip,
-				radius: formattedRadius
-			}
+		var formattedRadius = searchRadius;
+		axios.post('/api/yelp/auth/', {
+    params: {
+    	zip: formattedZip, 
+    	radius: formattedRadius
+    }
+  }).then((response) => {
+			//do stuff with response
 		})
-		.then(function(res){
-			res.json(res);
-		});
+		console.log("Query Run");
+		
 	}
 }
 
