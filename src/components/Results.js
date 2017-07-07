@@ -17,9 +17,10 @@ class Results extends Component {
 
 	}
 
-	renderPlaces() {
+	/*renderPlaces() {
+		console.log(this.props);
 		return this.props.results.docs.map(function(business, index) {
-			return (
+		return (
 				<div key={index}>
 					<li className='list-group-item'>
 						<h3>{business[index].name}</h3>
@@ -33,7 +34,7 @@ class Results extends Component {
                   <button className="btn btn-default ">View on Yelp</button>
             </a>
 
-          	{/*<button className="btn btn-primary" onClick={() => this.handleClick(article)}>Save To Profile</button>*/}
+          	<button className="btn btn-primary" onClick={() => this.handleClick(article)}>Save To Profile</button>
 
           	<p>Serving: {business[index].categories[0].alias} </p>
           </li>
@@ -66,20 +67,20 @@ class Results extends Component {
         </div>
       </div>
 		);
-	}
+	}*/
 
 	render() {
 		// if (!this.props.results.docs) {
-	 //    return (
-	 //      <div className="Results">
-	 //        <div className="stopasking">
-	 //          <h3>Results will go here</h3>
-	 //        </div>
-	 //      </div>
-	 //    );
-	 //   }
-	   return this.renderContainer();
-	  }
+	    return (
+	      <div className="Results">
+	        <div className="stopasking">
+	          <h3>Results will go here</h3>
+	        </div>
+	      </div>
+	    );
+	   }
+	  //  return this.renderContainer();
+	  // }
 	}
 
 
